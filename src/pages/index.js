@@ -1,9 +1,13 @@
 import React from "react";
-import Navbar from "../components/navbar";
+import Hero from "../components/hero";
+import How from "../components/how";
 
 const Home = () => {
   return (
-    <div className='min-h-screen flex items-center justify-center'>Home</div>
+    <div className='max-w-6xl mx-auto p-8 md:p-0'>
+      <Hero />
+      <How />
+    </div>
   );
 };
 

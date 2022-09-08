@@ -60,7 +60,7 @@ const Navbar = () => {
         <div
           className={`${
             navOpen ? "translate-x-0" : "-translate-x-full"
-          } transition fixed md:-translate-x-full top-0 left-0 p-6 bg-white shadow-xl min-h-screen`}
+          } transition fixed md:-translate-x-full top-0 z-10 left-0 p-6 bg-white shadow-xl h-screen`}
         >
           <div className='flex space-x-20 items-center w-full'>
             <Link className='text-xl font-extrabold' to='/'>
