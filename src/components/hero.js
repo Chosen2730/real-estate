@@ -10,6 +10,7 @@ import air from "../images/airbnb.png";
 import uber from "../images/uber.png";
 
 const Hero = () => {
+  const logos = [buzz, chase, ms, gucc, air, uber];
   return (
     <div className='relative'>
       <div className='grid md:grid-cols-2'>
@@ -44,12 +45,16 @@ const Hero = () => {
           <div className='mt-40'>
             <h1 className='text-sm my-4'>Our Amazing Partners</h1>
             <div className='flex gap-4'>
-              <img src={buzz} className='w-10 sm:w-16' alt='' />
-              <img src={chase} className='w-10 sm:w-16' alt='' />
-              <img src={ms} className='w-10 sm:w-16' alt='' />
-              <img src={gucc} className='w-10 sm:w-16' alt='' />
-              <img src={air} className='w-10 sm:w-16' alt='' />
-              <img src={uber} className='w-10 sm:w-16' alt='' />
+              {logos.map((logo, i) => {
+                return (
+                  <img
+                    key={i}
+                    src={logo}
+                    className='w-10 sm:w-16'
+                    alt={`${i}logo`}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
