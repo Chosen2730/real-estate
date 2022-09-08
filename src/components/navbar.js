@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CgMenuRight, CgClose } from "react-icons/cg";
 
@@ -14,14 +14,30 @@ const navItems = [
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [base, setBase] = useState(0);
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    });
+  }, []);
+
   return (
-    <div className='p-6 text-gray-800'>
+    <div
+      className={`${
+        scroll ? "fixed w-full bg-white shadow-xl z-10" : ""
+      } p-6 text-gray-800 transition`}
+    >
       {/* TOP MENU BAR */}
 
       <div className='flex justify-between max-w-6xl mx-auto font-bold items-center'>
         <div className='flex justify-between items-center w-full'>
           <Link
-            className={`text-xl font-extrabold hover:text-red-500 transition md:hover:scale-105 md:hover:translate-x-9`}
+            className={`text-xl font-extrabold hover:text-[#F85A47] transition md:hover:scale-105 md:hover:translate-x-9`}
             to='/'
           >
             SmartSpace
@@ -43,7 +59,7 @@ const Navbar = () => {
                 key={i}
                 className={`${
                   i === base
-                    ? "text-red-500 border-b-2 border-b-red-500"
+                    ? "text-[#F85A47] border-b-2 border-b-[#F85A47]"
                     : "text-gray-800"
                 } text-sm hover:text-red-300 transition`}
                 to={url}
@@ -76,7 +92,7 @@ const Navbar = () => {
                 key={i}
                 className={`${
                   i === base
-                    ? "text-red-500 border-b-2 border-b-red-500"
+                    ? "text-[#F85A47] border-b-2 border-b-[#F85A47]"
                     : "text-gray-800"
                 } block my-10 py-2 text-sm transition`}
                 to={url}

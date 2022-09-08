@@ -15,7 +15,7 @@ const Hero = () => {
     <div className='relative'>
       <div className='grid md:grid-cols-2'>
         <div className='mt-12'>
-          <h3 className='text-red-500 uppercase text-lg sm:text-xl font-extrabold'>
+          <h3 className='text-[#F85A47] uppercase text-lg sm:text-xl font-extrabold'>
             Residential & Office Spaces
           </h3>
           <h1 className='text-gray-800 text-4xl leading-[3rem] md:text-5xl font-extrabold my-4'>
@@ -27,9 +27,9 @@ const Hero = () => {
           </p>
           <form
             action=''
-            className='flex items-center shadow-2xl border-2 border-gray-50 text-sm my-4 pl-2 gap-2 bg-white'
+            className='flex items-center shadow-2xl text-sm my-4 pl-2 gap-2 bg-white'
           >
-            <MdOutlineHomeWork className='text-gray-300 text-2xl' />
+            <MdOutlineHomeWork className='text-gray-300 text-3xl' />
             <input
               type='text'
               placeholder='Enter Zipcode to search porperies'
@@ -37,7 +37,7 @@ const Hero = () => {
             />
             <button
               type='submit'
-              className='bg-red-500 text-white text-xs p-5 ml-auto w-fit whitespace-nowrap'
+              className='bg-[#F85A47] text-white text-xs p-5 ml-auto w-fit whitespace-nowrap'
             >
               Search Now!
             </button>
