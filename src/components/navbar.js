@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className='flex justify-between max-w-6xl mx-auto font-bold items-center'>
         <div className='flex justify-between items-center w-full'>
           <Link
-            className={`text-xl font-extrabold hover:text-red-500 transition hover:scale-105 hover:translate-x-9`}
+            className={`text-xl font-extrabold hover:text-red-500 transition md:hover:scale-105 md:hover:translate-x-9`}
             to='/'
           >
             SmartSpace
@@ -78,7 +78,7 @@ const Navbar = () => {
                   i === base
                     ? "text-red-500 border-b-2 border-b-red-500"
                     : "text-gray-800"
-                } block my-5 text-sm transition`}
+                } block my-10 py-2 text-sm transition`}
                 to={url}
                 onClick={() => {
                   setBase(i);
