@@ -10,7 +10,7 @@ const Error = () => {
         shortly.
       </p>
       <Link to='/'>
-        <button className='bg-red-500 p-3 px-8 rounded-xl text-white font-bold hover:bg-red-700 transition hover:scale-95'>
+        <button className='bg-red-500 p-3 px-8 rounded-xl text-white font-bold hover:bg-red-700 transition hover:scale-95 text-xs'>
           Return Home
         </button>
       </Link>
