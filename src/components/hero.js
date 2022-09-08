@@ -14,13 +14,13 @@ const Hero = () => {
     <div className='relative'>
       <div className='grid md:grid-cols-2'>
         <div className='mt-12'>
-          <h3 className='text-red-500 uppercase text-lg sm:text-xl font-bold'>
+          <h3 className='text-red-500 uppercase text-lg sm:text-xl font-extrabold'>
             Residential & Office Spaces
           </h3>
           <h1 className='text-gray-800 text-4xl leading-[3rem] md:text-5xl font-extrabold my-4'>
             Smart Living Style for Smart People
           </h1>
-          <p className='text-base'>
+          <p className='text-base my-6'>
             Much did had call new drew that kept. Limits expect wonder law she.
             Now has you views woman noisy match money rooms.
           </p>

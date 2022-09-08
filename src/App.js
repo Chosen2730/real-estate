@@ -6,11 +6,13 @@ import Error from "./pages/error";
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='*' element={<Error />} />
-      </Routes>
+      <div className='overflow-hidden'>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
